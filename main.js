@@ -80,11 +80,11 @@ if (cursor) {
   };
 
   interactiveElements.forEach((element) => {
-    element.addEventListener("pointerenter", () => {
+    element.addEventListener("mouseenter", () => {
       cursor.classList.add("custom-cursor--link");
       moveCursor(cursorX, cursorY);
     });
-    element.addEventListener("pointerleave", () => {
+    element.addEventListener("mouseleave", () => {
       cursor.classList.remove("custom-cursor--link");
       moveCursor(cursorX, cursorY);
     });
