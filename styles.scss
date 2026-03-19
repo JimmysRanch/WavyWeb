@@ -726,10 +726,10 @@ section {
 
   li {
     padding: 0.85rem 1.15rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid $green;
     border-radius: 999px;
-    color: $white;
-    background: rgba(255, 255, 255, 0.06);
+    color: $black;
+    background: $green;
     font-weight: 700;
   }
 }
