@@ -925,6 +925,11 @@ section {
   .section-copy {
     padding: 4.5rem 1.25rem;
   }
+
+  .two .section-label,
+  .two h2 {
+    margin-left: clamp(2.5rem, 12vw, 5rem);
+  }
 }
 
 @media screen and (max-width: 575px) {
