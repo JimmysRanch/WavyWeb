@@ -165,7 +165,7 @@ a.green {
 }
 
 .swoosh::before {
-  content: "WavyWeb";
+  content: "Maximize Your Warranty";
   color: #00bcd4;
   font-size: 1.55rem;
   text-shadow: 10px 0 0 rgba(255, 255, 255, 0.85);
@@ -200,7 +200,7 @@ a.green {
 }
 
 .sticky-nav .logo::before {
-  content: "WavyWeb";
+  content: "Maximize Your Warranty";
   color: #efefef;
   font-size: 1.5rem;
 }
