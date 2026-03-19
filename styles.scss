@@ -678,6 +678,10 @@ section {
   font-size: clamp(2.6rem, 7vw, 5.8rem);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero-highlights {
   margin: 2rem 0;
   padding: 0;
