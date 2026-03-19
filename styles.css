@@ -389,8 +389,6 @@ section {
 
 .two {
   background-color: #efefef;
-  position: relative;
-  z-index: 1;
 }
 
 .three {
