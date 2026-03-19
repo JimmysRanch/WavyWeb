@@ -6,6 +6,7 @@ const navLinks = document.querySelectorAll("#takeover-nav a");
 const lineTop = document.getElementById("line-top");
 const lineMiddle = document.getElementById("line-middle");
 const lineBottom = document.getElementById("line-bottom");
+let navIsOpen = false;
 
 const setMenuState = (isOpen) => {
   if (!navButton || !takeoverNav || !stickyNav) {
@@ -18,6 +19,7 @@ const setMenuState = (isOpen) => {
   document.documentElement.classList.toggle("nav-open", isOpen);
   navButton.setAttribute("aria-expanded", String(isOpen));
   takeoverNav.setAttribute("aria-hidden", String(!isOpen));
+  navIsOpen = isOpen;
 
   if (lineTop && lineMiddle && lineBottom) {
     if (isOpen) {
@@ -34,8 +36,7 @@ const setMenuState = (isOpen) => {
 
 if (navButton) {
   navButton.addEventListener("click", () => {
-    const isOpen = navButton.getAttribute("aria-expanded") !== "true";
-    setMenuState(isOpen);
+    setMenuState(!navIsOpen);
   });
 }
 

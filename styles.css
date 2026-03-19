@@ -339,7 +339,6 @@ a.green {
 
 section {
   min-height: 800px;
-  height: 800px;
   width: 100%;
 }
 
@@ -403,27 +402,6 @@ section {
 .five {
   background-color: #29639c;
   color: #efefef;
-}
-
-.container-fluid,
-.row,
-.d-flex,
-.align-items-center,
-.justify-content-between,
-.justify-content-center,
-.position-relative,
-.position-absolute,
-.w-100,
-.h-100,
-.py-5,
-.px-3,
-.pt-5,
-.pb-3,
-.order-0,
-.order-1,
-.text-center,
-.mb-5 {
-  position: initial;
 }
 
 .container-fluid {
@@ -639,7 +617,6 @@ html.nav-open body {
 
   .hero {
     min-height: 600px;
-    height: 600px;
   }
 
   .hero .hero-title {
