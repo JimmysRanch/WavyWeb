@@ -50,10 +50,14 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (cursor) {
-  const interactiveElements = document.querySelectorAll("a, button, input.btn");
+  const interactiveElements = document.querySelectorAll("a, button");
   let cursorVisible = false;
   let cursorX = 0;
   let cursorY = 0;
+
+  if (window.matchMedia("(pointer: fine)").matches) {
+    document.documentElement.classList.add("has-custom-cursor");
+  }
 
   const moveCursor = (x, y) => {
     cursorX = x;
