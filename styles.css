@@ -389,6 +389,8 @@ section {
 
 .two {
   background-color: #efefef;
+  position: relative;
+  z-index: 1;
 }
 
 .three {
@@ -616,15 +618,40 @@ html.nav-open body {
   }
 
   .hero {
-    min-height: 600px;
+    min-height: 100vh;
+  }
+
+  .hero .content {
+    width: 100%;
+    max-width: 24rem;
+    margin-bottom: 0;
+    padding-top: 6.5rem;
+    padding-bottom: 7rem;
   }
 
   .hero .hero-title {
-    font-size: 12vw;
+    font-size: clamp(2rem, 8.4vw, 2.7rem);
   }
 
   .hero #video-bg {
     background-position: center 30vw;
+  }
+
+  .hero-highlights {
+    margin: 1.5rem 0;
+  }
+
+  .hero-title-tail {
+    max-width: 9ch;
+  }
+
+  .two .section-copy {
+    padding-top: 3.75rem;
+  }
+
+  .card-grid,
+  .process-grid {
+    margin-top: 1.75rem;
   }
 }
 
@@ -664,6 +691,15 @@ section {
 
 .hero-title {
   font-size: clamp(2.6rem, 7vw, 5.8rem);
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-tail {
+  max-width: 12ch;
+  margin: 0 auto;
 }
 
 .nowrap {
