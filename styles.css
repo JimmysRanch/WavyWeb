@@ -627,3 +627,280 @@ html.nav-open body {
     background-position: center 30vw;
   }
 }
+
+.swoosh,
+.sticky-nav .logo {
+  width: min(420px, 70vw);
+}
+
+.swoosh::before {
+  content: "Maximize Your Warranty";
+  font-size: clamp(0.95rem, 2.2vw, 1.45rem);
+  text-shadow: none;
+}
+
+.sticky-nav .logo::before {
+  content: "Maximize Your Warranty";
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+}
+
+.nav-title {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+}
+
+section {
+  min-height: auto;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.hero .content {
+  max-width: 1080px;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 7vw, 5.8rem);
+}
+
+.hero-highlights {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.hero-highlights li {
+  padding: 0.85rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #efefef;
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  background: #00bcd4;
+  color: #212121;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  background: #efefef;
+  color: #212121;
+}
+
+.section-copy {
+  max-width: 1180px;
+  padding: 6rem 1.5rem;
+}
+
+.section-copy h2 {
+  margin-bottom: 1.25rem;
+}
+
+.section-lead,
+.analyst-copy p,
+.contact-copy p,
+.faq-list p,
+.info-card p,
+.process-step p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.card-grid,
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.compact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.info-card,
+.process-step,
+.contact-form,
+.faq-list details {
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.info-card,
+.process-step {
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.info-card h3,
+.process-step h3 {
+  margin-bottom: 0.85rem;
+  font-size: 1.4rem;
+}
+
+.info-card p:last-child,
+.process-step p:last-child {
+  margin-bottom: 0;
+}
+
+.process-step {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.step-number {
+  margin-bottom: 1rem;
+  color: #29639c;
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.subsection-block {
+  margin-top: 4rem;
+}
+
+.analyst-copy h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.six {
+  background: #dff8fb;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-form {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(33, 33, 33, 0.15);
+  border-radius: 14px;
+  background: #fff;
+  color: #212121;
+}
+
+.contact-form button {
+  padding: 1rem 1.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: #212121;
+  color: #efefef;
+  font-weight: 800;
+}
+
+.form-note {
+  margin-bottom: 0;
+  color: rgba(33, 33, 33, 0.7);
+  font-size: 0.95rem;
+}
+
+.faq-section {
+  background: #f7f7f7;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.faq-list details {
+  padding: 1.4rem 1.5rem;
+  background: #fff;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list p {
+  margin: 1rem 0 0;
+}
+
+.site-footer {
+  padding: 2rem 1.5rem 3rem;
+  background: #212121;
+  color: #efefef;
+  text-align: center;
+}
+
+.footer-brand {
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media screen and (max-width: 767px) {
+  .hero .content {
+    padding-top: 7rem;
+  }
+
+  .hero-highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-copy {
+    padding: 4.5rem 1.25rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .swoosh,
+  .sticky-nav .logo {
+    width: min(255px, 66vw);
+  }
+
+  .swoosh::before,
+  .sticky-nav .logo::before {
+    font-size: 0.78rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 10vw, 3.6rem);
+  }
+}

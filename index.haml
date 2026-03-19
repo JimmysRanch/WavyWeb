@@ -15,55 +15,166 @@
           .nav-col.nav-contact.col-12.col-md-7.bg-black.d-flex.align-items-center.justify-content-center.position-relative.py-5.px-3.order-1.order-md-0
             .position-absolute.w-100.h-100.bg-topographic
             .content.position-relative
-              %h2.nav-title.white.mb-5
-                build your digital success with us
+              %p.section-label.green Maximize Your Warranty
+              %h2.nav-title.white.mb-5 Receive Retail Rates on Warranty Reimbursements That You Are Entitled To
               %ul.contact-items.white.list-unstyled.mb-5
                 %li.pb-4
-                  %a.text-decoration-none{:href => "tel:+13862354062"} +1 386-235-4062
-                %li.pb-4
-                  %a.text-decoration-none{:href => "mailto:morgan@tactusmarketing.com"} morgan@tactusmarketing.com
-                %li
-                  %a.text-decoration-none{:href => "https://maps.google.com/?q=Aguadilla,PR+00603", :rel => "noopener noreferrer", :target => "_blank"} Aguadilla, PR 00603
+                  %a.text-decoration-none{:href => "tel:+12102698380"} Call Harry 210.269.8380
+                %li.pb-4 No Upfront Fees
+                %li.pb-4 Flexible Fee Structure
+                %li Deep Dive, Data Driven
               .social
-                %a.text-decoration-none.green{:href => "#"} linkedin
+                %a.text-decoration-none.green{:href => "#what-we-do"} what we do
                 %span.mx-2.white |
-                %a.text-decoration-none.green{:href => "#"} facebook
+                %a.text-decoration-none.green{:href => "#contact"} contact
                 %span.mx-2.white |
-                %a.text-decoration-none.green{:href => "#"} instagram
+                %a.text-decoration-none.green{:href => "#faq"} faq
           .nav-col.nav-menu.col-12.col-md-5.bg-green.d-flex.align-items-center.pt-5.pb-3.pb-md-5.px-3.px-md-5.order-0.order-md-1
             %ul.nav-items.list-unstyled
               %li.pb-3
-                %a.text-decoration-none{:href => "#services"} services
+                %a.text-decoration-none{:href => "#what-we-do"} what we do
               %li.pb-3
-                %a.text-decoration-none{:href => "#portfolio"} portfolio
+                %a.text-decoration-none{:href => "#process"} our process
               %li.pb-3
-                %a.text-decoration-none{:href => "#contact"} contact
+                %a.text-decoration-none{:href => "#why-us"} why dealers choose us
+              %li.pb-3
+                %a.text-decoration-none{:href => "#analyst"} chief key analyst
+              %li.pb-3
+                %a.text-decoration-none{:href => "#contact"} contact us
               %li
-                %a.text-decoration-none{:href => "#about"} about
+                %a.text-decoration-none{:href => "#faq"} frequently asked questions
+
   %section.hero.d-flex.align-items-center.justify-content-center
     .video-wrap
       #video-bg
     .position-absolute.w-100.gradient-overlay
     .content.position-relative.text-center.mb-5
-      %p.eyebrow.green Creative marketing studio
+      %p.eyebrow.green Maximize Your Warranty
       %h1.hero-title.blend
-        Where Creativity
+        Receive Retail Rates
         %br
-        & Strategy Meet
-  %section.two#services
+        on Warranty Reimbursements
+        %br
+        That You Are Entitled To
+      %ul.hero-highlights.list-unstyled
+        %li No Upfront Fees
+        %li Flexible Fee Structure
+        %li Deep Dive, Data Driven
+      %a.cta-button{:href => "#contact"} Get Started
+
+  %section.two#what-we-do
     .section-copy
-      %p.section-label SERVICES
-      %h2 Creative systems that turn ideas into momentum.
-  %section.three#portfolio
+      %p.section-label WHAT WE DO
+      %h2 Full Data Review & Cleansing
+      .card-grid
+        %article.info-card
+          %h3 Full Data Review & Cleansing
+          %p Pulling complete, accurate datasets from multiple OEM portals to eliminate gaps or inconsistencies that manual reviews often miss.
+        %article.info-card
+          %h3 Granular Code & Procedure Breakdown
+          %p Line-by-line examination of every repair order to spot under-reimbursed operations, misapplied times, or uncaptured add-ons.
+        %article.info-card
+          %h3 Retail Rate Benchmarking
+          %p Comparing your dealership's actual customer-pay rates to warranty reimbursements, aligned with state laws and OEM guidelines for maximum justifiable increases.
+        %article.info-card
+          %h3 Defensible Submission Prep
+          %p Compiling comprehensive, evidence-based reports that withstand OEM scrutiny and accelerate approvals.
+        %article.info-card
+          %h3 Ongoing Optimization
+          %p Quarterly or as-needed reviews to adapt to evolving manufacturer policies, new repair patterns, and emerging profit pockets.
+
+  %section.three#process
     .section-copy
-      %p.section-label PORTFOLIO
-      %h2 Built for brands that want to stand out and scale up.
-  %section.four#contact
+      %p.section-label OUR PROCESS
+      %h2 Built on Proven Dealership Expertise and Analyses
+      .process-grid
+        %article.process-step
+          %p.step-number 1
+          %h3 Data Driven Expert Analysis
+          %p We Analyze Your Current Rates
+        %article.process-step
+          %p.step-number 2
+          %h3 Professional Package Completion
+          %p We Prepare & File for Maximum Increases
+        %article.process-step
+          %p.step-number 3
+          %h3 Direct Manufacturer Submission
+          %p Typically in 30-60 Days
+
+  %section.four#why-us
     .section-copy
-      %p.section-label CONTACT
-      %h2 Let’s shape your next launch, campaign, or identity.
-  %section.five#about
+      %p.section-label WHY DEALERS CHOOSE US
+      %h2 We Specialize In Both Parts And Labor Warranty Reimbursement Submissions
+      %p.section-lead That's ALL We Do.
+      .card-grid.compact-grid
+        %article.info-card
+          %h3 Proven Results
+          %p 20% to 50% Rate Increases
+        %article.info-card
+          %h3 No Upfront Fees
+          %p We Get Paid When You Get Paid
+
+      .subsection-block
+        %p.section-label HOW WE DO IT BETTER
+        .card-grid.compact-grid
+          %article.info-card
+            %h3 Expert Data Analysis
+            %p Data Driven Submissions
+          %article.info-card
+            %h3 Aggressive Follow Through
+            %p No Denials Left on the Table
+          %article.info-card
+            %h3 Ongoing Monitoring
+            %p Continuous Profit Recovery
+
+  %section.five#analyst
+    .section-copy.analyst-copy
+      %p.section-label THE KEY TO FIXED OPERATIONS PROFITABILITY
+      %h2 Our Chief Key Analyst
+      %p Our Chief Key Analyst is a former multi-brand Fixed Operations Director and recognized expert in dealership service operations.
+      %p With decades of hands-on experience leading franchised dealership service departments and serving as a consultant on data-driven rate optimization and warranty submissions, he drives our mission to maximize profitability and uncover hidden reimbursement opportunities for dealer clients.
+      %h3 What Our Key Deep Data Dives Uncover
+      %p Our proprietary 'Key Deep Data Dives' go well beyond standard reviews. These in-depth analyses extract and normalize service and parts data from OEM systems, scrutinize every CPT code, labor time, parts markup, sublet charge, and policy application. By benchmarking against regional and national peers, identifying overlooked fees (hazmat, disposal, warranty specials), and building irrefutable, data-backed cases, these dives routinely secure 10-30%+ increases in warranty payouts—translating to significant, recurring bottom-line gains with minimal dealer effort.
+
+  %section.six#contact
+    .section-copy.contact-layout
+      .contact-copy
+        %p.section-label Contact Us
+        %h2 Call Harry 210.269.8380
+        %p Want to receive the compensation you’re entitled to?
+
+      %form#contact-form.contact-form
+        %label
+          %span Name
+          %input{:type => "text", :name => "name", :autocomplete => "name"}
+        %label
+          %span Email
+          %input{:type => "email", :name => "email", :autocomplete => "email"}
+        %label
+          %span Phone Number
+          %input{:type => "tel", :name => "phone", :autocomplete => "tel"}
+        %button{:type => "submit"} Get Started
+        %p.form-note No cost review or obligation
+
+  %section.faq-section#faq
     .section-copy
-      %p.section-label ABOUT
-      %h2 Strategy-first design with bold, human-centered storytelling.
+      %p.section-label Frequently Asked Questions
+      .faq-list
+        %details{:open => true}
+          %summary Is my dealership eligible even if I have done this before?
+          %p Yes. State franchise laws entitle dealers to receive retail rates for warranty work, provided the proper submission process is followed. Typically dealers may submit once per calendar year or on an anniversary date, depending on state law.
+        %details
+          %summary Will my team be burdened and have to spend their own time working on this?
+          %p No. We handle the professional package completion and direct manufacturer submission so your team can stay focused on day-to-day operations.
+        %details
+          %summary Should I focus on Parts or labor first?
+          %p Both. We specialize in both parts and labor warranty reimbursement submissions. That's ALL We Do.
+        %details
+          %summary How long will the process take or when will I receive my increase?
+          %p Typically in 30-60 Days.
+
+  %footer.site-footer
+    %p.footer-brand Maximize Your Warranty
+    %p © 2026 Maximize Your Warranty. All rights reserved.
+
 .custom-cursor
