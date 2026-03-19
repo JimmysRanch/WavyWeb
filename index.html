@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WavyWeb Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="swoosh position-fixed"></div>
+        <div class="sticky-nav difference d-flex justify-content-between">
+          <div class="logo"></div>
+          <button
+            id="nav-btn"
+            class="menu box"
+            type="button"
+            aria-controls="takeover-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path id="line-top" d="M30 37 H70"></path>
+              <path id="line-middle" d="M30 50 H70"></path>
+              <path id="line-bottom" d="M30 63 H70"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav id="takeover-nav" aria-hidden="true">
+          <div class="container-fluid">
+            <div class="row">
+              <div
+                class="nav-col nav-contact col-12 col-md-7 bg-black d-flex align-items-center justify-content-center position-relative py-5 px-3 order-1 order-md-0"
+              >
+                <div class="position-absolute w-100 h-100 bg-topographic"></div>
+                <div class="content position-relative">
+                  <h2 class="nav-title white mb-5">build your digital success with us</h2>
+                  <ul class="contact-items white list-unstyled mb-5">
+                    <li class="pb-4">
+                      <a class="text-decoration-none" href="tel:+13862354062">+1 386-235-4062</a>
+                    </li>
+                    <li class="pb-4">
+                      <a class="text-decoration-none" href="mailto:morgan@tactusmarketing.com">
+                        morgan@tactusmarketing.com
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-decoration-none"
+                        href="https://maps.google.com/?q=Aguadilla,PR+00603"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Aguadilla, PR 00603
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="social">
+                    <a class="text-decoration-none green" href="#">linkedin</a>
+                    <span class="mx-2 white">|</span>
+                    <a class="text-decoration-none green" href="#">facebook</a>
+                    <span class="mx-2 white">|</span>
+                    <a class="text-decoration-none green" href="#">instagram</a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="nav-col nav-menu col-12 col-md-5 bg-green d-flex align-items-center pt-5 pb-3 pb-md-5 px-3 px-md-5 order-0 order-md-1"
+              >
+                <ul class="nav-items list-unstyled">
+                  <li class="pb-3"><a class="text-decoration-none" href="#services">services</a></li>
+                  <li class="pb-3"><a class="text-decoration-none" href="#portfolio">portfolio</a></li>
+                  <li class="pb-3"><a class="text-decoration-none" href="#contact">contact</a></li>
+                  <li><a class="text-decoration-none" href="#about">about</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero d-flex align-items-center justify-content-center">
+        <div class="video-wrap">
+          <div id="video-bg"></div>
+        </div>
+        <div class="position-absolute w-100 gradient-overlay"></div>
+        <div class="content position-relative text-center mb-5">
+          <p class="eyebrow green">Creative marketing studio</p>
+          <h1 class="hero-title blend">
+            Where Creativity
+            <br />
+            &amp; Strategy Meet
+          </h1>
+        </div>
+      </section>
+
+      <section class="two" id="services">
+        <div class="section-copy">
+          <p class="section-label">SERVICES</p>
+          <h2>Creative systems that turn ideas into momentum.</h2>
+        </div>
+      </section>
+
+      <section class="three" id="portfolio">
+        <div class="section-copy">
+          <p class="section-label">PORTFOLIO</p>
+          <h2>Built for brands that want to stand out and scale up.</h2>
+        </div>
+      </section>
+
+      <section class="four" id="contact">
+        <div class="section-copy">
+          <p class="section-label">CONTACT</p>
+          <h2>Let’s shape your next launch, campaign, or identity.</h2>
+        </div>
+      </section>
+
+      <section class="five" id="about">
+        <div class="section-copy">
+          <p class="section-label">ABOUT</p>
+          <h2>Strategy-first design with bold, human-centered storytelling.</h2>
+        </div>
+      </section>
+    </div>
+
+    <div class="custom-cursor"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

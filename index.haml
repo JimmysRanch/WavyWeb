@@ -1,0 +1,69 @@
+.page
+  %header
+    .swoosh.position-fixed
+    .sticky-nav.difference.d-flex.justify-content-between
+      .logo
+      %button#nav-btn.menu.box{"aria-controls" => "takeover-nav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", :type => "button"}
+        %svg.icon{:viewBox => "0 0 100 100", :xmlns => "http://www.w3.org/2000/svg"}
+          %path#line-top{:d => "M30 37 H70"}
+          %path#line-middle{:d => "M30 50 H70"}
+          %path#line-bottom{:d => "M30 63 H70"}
+
+    #takeover-nav{"aria-hidden" => "true"}
+      .container-fluid
+        .row
+          .nav-col.nav-contact.col-12.col-md-7.bg-black.d-flex.align-items-center.justify-content-center.position-relative.py-5.px-3.order-1.order-md-0
+            .position-absolute.w-100.h-100.bg-topographic
+            .content.position-relative
+              %h2.nav-title.white.mb-5
+                build your digital success with us
+              %ul.contact-items.white.list-unstyled.mb-5
+                %li.pb-4
+                  %a.text-decoration-none{:href => "tel:+13862354062"} +1 386-235-4062
+                %li.pb-4
+                  %a.text-decoration-none{:href => "mailto:morgan@tactusmarketing.com"} morgan@tactusmarketing.com
+                %li
+                  %a.text-decoration-none{:href => "https://maps.google.com/?q=Aguadilla,PR+00603", :rel => "noopener noreferrer", :target => "_blank"} Aguadilla, PR 00603
+              .social
+                %a.text-decoration-none.green{:href => "#"} linkedin
+                %span.mx-2.white |
+                %a.text-decoration-none.green{:href => "#"} facebook
+                %span.mx-2.white |
+                %a.text-decoration-none.green{:href => "#"} instagram
+          .nav-col.nav-menu.col-12.col-md-5.bg-green.d-flex.align-items-center.pt-5.pb-3.pb-md-5.px-3.px-md-5.order-0.order-md-1
+            %ul.nav-items.list-unstyled
+              %li.pb-3
+                %a.text-decoration-none{:href => "#services"} services
+              %li.pb-3
+                %a.text-decoration-none{:href => "#portfolio"} portfolio
+              %li.pb-3
+                %a.text-decoration-none{:href => "#contact"} contact
+              %li
+                %a.text-decoration-none{:href => "#about"} about
+  %section.hero.d-flex.align-items-center.justify-content-center
+    .video-wrap
+      #video-bg
+    .position-absolute.w-100.gradient-overlay
+    .content.position-relative.text-center.mb-5
+      %p.eyebrow.green Creative marketing studio
+      %h1.hero-title.blend
+        Where Creativity
+        %br
+        & Strategy Meet
+  %section.two#services
+    .section-copy
+      %p.section-label SERVICES
+      %h2 Creative systems that turn ideas into momentum.
+  %section.three#portfolio
+    .section-copy
+      %p.section-label PORTFOLIO
+      %h2 Built for brands that want to stand out and scale up.
+  %section.four#contact
+    .section-copy
+      %p.section-label CONTACT
+      %h2 Let’s shape your next launch, campaign, or identity.
+  %section.five#about
+    .section-copy
+      %p.section-label ABOUT
+      %h2 Strategy-first design with bold, human-centered storytelling.
+.custom-cursor
