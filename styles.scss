@@ -315,8 +315,8 @@ a.green {
 .gradient-overlay {
   position: absolute;
   bottom: 0;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 1) 50%);
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(33, 33, 33, 0) 0%, rgba(33, 33, 33, 0.85) 40%, rgba(33, 33, 33, 1) 70%);
   z-index: 1;
   border-bottom-right-radius: 15vw;
   pointer-events: none;
@@ -330,6 +330,16 @@ a.green {
   pointer-events: none;
 }
 
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.55;
+}
+
 #video-bg {
   position: absolute;
   inset: 0;
@@ -340,8 +350,7 @@ a.green {
     radial-gradient(circle at 50% 80%, rgba(41, 99, 156, 0.35), transparent 24%),
     linear-gradient(120deg, rgba(255, 255, 255, 0.06), transparent 45%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 40%),
-    linear-gradient(140deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45)),
-    linear-gradient(135deg, #1c1c1c 0%, #313131 45%, #111 100%);
+    linear-gradient(140deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45));
   transform: rotate(180deg) scale(1.1);
 }
 
@@ -400,15 +409,20 @@ section {
 }
 
 .three {
-  background-color: $purple;
+  background: linear-gradient(rgba(15, 15, 20, 0.82), rgba(15, 15, 20, 0.82)),
+    url("https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
+  color: $white;
 }
 
 .four {
-  background-color: $green;
+  background: linear-gradient(rgba(10, 10, 15, 0.8), rgba(10, 10, 15, 0.8)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
+  color: $white;
 }
 
 .five {
-  background-color: $blue;
+  background: linear-gradient(rgba(10, 15, 25, 0.82), rgba(10, 15, 25, 0.82)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
   color: $white;
 }
 
@@ -651,10 +665,6 @@ html.nav-open body {
     margin: 1.5rem 0;
   }
 
-  .hero-title-tail {
-    max-width: 9ch;
-  }
-
   .two .section-copy {
     padding-top: 3.75rem;
   }
@@ -664,6 +674,8 @@ html.nav-open body {
     margin-top: 1.75rem;
   }
 }
+
+// --- Premium overrides ---
 
 .swoosh,
 .sticky-nav .logo {
@@ -701,19 +713,9 @@ section {
 
 .hero-title {
   font-size: clamp(2.6rem, 7vw, 5.8rem);
-}
-
-.hero-title-line {
-  display: block;
-}
-
-.hero-title-tail {
-  max-width: 12ch;
-  margin: 0 auto;
-}
-
-.nowrap {
-  white-space: nowrap;
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-highlights {
@@ -731,6 +733,7 @@ section {
     color: $white;
     background: rgba(255, 255, 255, 0.06);
     font-weight: 700;
+    backdrop-filter: blur(6px);
   }
 }
 
@@ -738,17 +741,23 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.95rem 1.6rem;
+  padding: 1.1rem 2.4rem;
   border-radius: 999px;
   background: $green;
   color: $black;
   text-decoration: none;
   font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 32px rgba(0, 188, 212, 0.35);
+  transition: all 0.3s ease;
 
   &:hover,
   &:focus-visible {
     background: $white;
     color: $black;
+    box-shadow: 0 8px 40px rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
   }
 }
 
@@ -758,6 +767,8 @@ section {
 
   h2 {
     margin-bottom: 1.25rem;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
   }
 }
 
@@ -769,6 +780,25 @@ section {
 .process-step p {
   font-size: 1.05rem;
   line-height: 1.75;
+}
+
+// Card icons
+.card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, $green 0%, $blue 100%);
+  color: #fff;
+  flex-shrink: 0;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .card-grid,
@@ -795,6 +825,12 @@ section {
 .process-step {
   padding: 1.75rem;
   background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
+  }
 
   h3 {
     margin-bottom: 0.85rem;
@@ -812,17 +848,63 @@ section {
 
 .step-number {
   margin-bottom: 1rem;
-  color: $blue;
+  color: $green;
   font-size: 2.75rem;
   font-weight: 900;
   line-height: 1;
+}
+
+// Process connectors
+.process-connector {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.35);
+
+  svg {
+    width: 40px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .process-grid {
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .process-connector {
+    display: flex;
+  }
 }
 
 .subsection-block {
   margin-top: 4rem;
 }
 
+// Section photos
+.section-photo {
+  max-width: 1180px;
+  margin: -3rem auto 0;
+  padding: 0 1.5rem 4rem;
+
+  img {
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    max-height: 420px;
+  }
+}
+
+// Analyst section
 .analyst-copy {
+  max-width: 800px;
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
   h3 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -830,8 +912,11 @@ section {
   }
 }
 
+// Contact section
 .six {
-  background: #dff8fb;
+  background: linear-gradient(rgba(10, 20, 30, 0.85), rgba(10, 20, 30, 0.85)),
+    url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
+  color: $white;
 }
 
 .contact-layout {
@@ -841,11 +926,24 @@ section {
   align-items: start;
 }
 
+.contact-photo {
+  margin-top: 1.5rem;
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    max-height: 260px;
+  }
+}
+
 .contact-form {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.92);
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
   display: grid;
   gap: 1rem;
+  border: 1px solid rgba(0, 188, 212, 0.15);
 
   label {
     display: grid;
@@ -860,6 +958,13 @@ section {
     border-radius: 14px;
     background: #fff;
     color: $black;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $green;
+      box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+    }
   }
 
   button {
@@ -869,7 +974,30 @@ section {
     background: $black;
     color: $white;
     font-weight: 800;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: $green;
+      color: $black;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0, 188, 212, 0.3);
+    }
   }
+}
+
+.form-heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0;
+  color: $black;
+}
+
+.form-subheading {
+  font-size: 0.95rem;
+  color: rgba(33, 33, 33, 0.6);
+  margin-bottom: 0.5rem;
 }
 
 .form-note {
@@ -878,6 +1006,7 @@ section {
   font-size: 0.95rem;
 }
 
+// FAQ
 .faq-section {
   background: #f7f7f7;
 }
@@ -890,6 +1019,15 @@ section {
   details {
     padding: 1.4rem 1.5rem;
     background: #fff;
+    transition: box-shadow 0.3s ease;
+
+    &[open] {
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    &[open] > summary::after {
+      transform: rotate(45deg);
+    }
   }
 
   summary {
@@ -897,6 +1035,19 @@ section {
     font-size: 1.05rem;
     font-weight: 800;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $green;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
   }
 
   summary::-webkit-details-marker {
@@ -908,6 +1059,7 @@ section {
   }
 }
 
+// Footer
 .site-footer {
   padding: 2rem 1.5rem 3rem;
   background: $black;
@@ -924,6 +1076,7 @@ section {
   letter-spacing: 0.08em;
 }
 
+// Responsive refinements
 @media screen and (max-width: 767px) {
   .hero .content {
     padding-top: 7rem;
@@ -952,5 +1105,15 @@ section {
 
   .hero-title {
     font-size: clamp(2.3rem, 10vw, 3.6rem);
+  }
+
+  .section-photo {
+    padding: 0 1rem 3rem;
+    margin-top: -1.5rem;
+
+    img {
+      border-radius: 20px;
+      max-height: 260px;
+    }
   }
 }
