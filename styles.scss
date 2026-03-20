@@ -1050,6 +1050,10 @@ section {
     &[open] {
       box-shadow: 0 24px 50px rgba(0, 0, 0, 0.1);
     }
+
+    &[open] > summary::after {
+      transform: rotate(45deg);
+    }
   }
 
   summary {
@@ -1070,10 +1074,6 @@ section {
       flex-shrink: 0;
       transition: transform 0.25s ease;
     }
-  }
-
-  details[open] > summary::after {
-    transform: rotate(45deg);
   }
 
   summary::-webkit-details-marker {

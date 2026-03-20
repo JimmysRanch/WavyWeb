@@ -823,7 +823,8 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.info-card:hover {
+.info-card:hover,
+.process-step:hover {
   transform: translateY(-4px);
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
 }
@@ -841,12 +842,6 @@ section {
 
 .process-step {
   background: rgba(255, 255, 255, 0.62);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.process-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
 }
 
 .step-number {
@@ -1065,7 +1060,7 @@ section {
   transition: transform 0.25s ease;
 }
 
-details[open] > summary::after {
+.faq-list details[open] > summary::after {
   transform: rotate(45deg);
 }
 
